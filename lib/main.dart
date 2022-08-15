@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 import 'package:scoped_model_flutter/homepage.dart';
+import 'package:scoped_model_flutter/models/counter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    // scoped model takes instance of a class as a model
+    return ScopedModel(
+      model: CounterClass(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: 'Flutter Scoped Model Demo'),
       ),
-      home: const MyHomePage(title: 'Flutter Scoped Model Demo'),
     );
   }
 }
