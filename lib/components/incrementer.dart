@@ -11,6 +11,7 @@ class Incrementer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // making the button the descendant of the scoped model so that we can access model.
     return ScopedModelDescendant<CounterClass>(
       builder: (context, child, model) => FloatingActionButton(
         onPressed: () {

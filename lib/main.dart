@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // scoped model takes instance of a class as a model
+
     return ScopedModel(
       model: CounterClass(),
+      // Now the state is at the top
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

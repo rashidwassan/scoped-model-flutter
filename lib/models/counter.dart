@@ -7,6 +7,7 @@ class CounterClass extends Model {
 
   void performIncrement() {
     _count++;
+    // updating the state
     notifyListeners();
   }
 }
