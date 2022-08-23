@@ -1,4 +1,4 @@
-# scoped_model_flutter
+# Scoped Model Basic Implementation
 
 A new Flutter project.
 
